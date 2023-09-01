@@ -1,4 +1,4 @@
-export async function GET(_request: Request) {
+export async function GET() {
   return new Response("The environment is healthy.", {
     status: 200,
   });
