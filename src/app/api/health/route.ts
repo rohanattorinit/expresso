@@ -1,6 +1,5 @@
 export async function GET(_request: Request) {
-  // Do whatever you want
-  return new Response("Hello World!", {
+  return new Response("The environment is healthy.", {
     status: 200,
   });
 }
