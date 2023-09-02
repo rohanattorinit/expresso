@@ -59,3 +59,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.squiggle {
+  filter: url("#squiggle");
+  position: relative;
+  transform: translateZ(0);
+}
