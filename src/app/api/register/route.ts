@@ -8,7 +8,6 @@ import prisma from "@/lib/prisma";
 export const POST = async (req: Request) => {
   try {
     const json = await req.json();
-    console.log(json);
     const body = createUserSchema.parse(json);
     const { email, name, password } = body;
 
