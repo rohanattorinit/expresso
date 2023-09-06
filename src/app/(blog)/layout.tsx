@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Londrina_Solid, Poppins } from "next/font/google";
 
+import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/layouts/Navbar";
 import Squiggle from "@/components/Squiggle";
 
@@ -36,10 +37,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${heading.variable} ${poppins.variable} `}
     >
-      <body className={`font-body min-h-screen`}>
+      <body
+        className={`font-body min-h-screen selection:text-background selection:bg-primary/60`}
+      >
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           <main>{children}</main>
+          <Toaster />
         </ThemeProvider>
         <Squiggle />
       </body>
